@@ -91,7 +91,7 @@ body {
     transform: scale(0.95);
 }
 
-.progress_steps-buton:disabled {
+.progress_steps-buton.disabled {
     cursor: not-allowed;
     background-color: var(--empty-color);
 }

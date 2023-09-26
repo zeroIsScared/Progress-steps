@@ -12,6 +12,9 @@ const nextHandler = () => {
 
     if (counter >= circles.length) {
         counter = 4;
+        nextButton.classList.add('disabled'); 
+    }else {
+        prevButton.classList.remove('disabled');
     }
     console.log(counter);
 }
@@ -21,6 +24,12 @@ const prevHandler = () => {
 
     if (counter <= 1) {
         counter = 1;
+        
+            prevButton.classList.add('disabled');      
+        
+    }else {
+       
+        nextButton.classList.remove('disabled');
     }
     console.log(counter);
 }
@@ -29,21 +38,25 @@ const updateCircle = () => {
     circles.forEach((item, index) => {
         if (index + 1 <= counter) {
             item.classList.add('active');
+            item.style.backgroundColor = `#5bf3f3`;
         } else if (index + 1 > counter) {
             item.classList.remove('active');
+            item.style.backgroundColor = `#e0e0e0`;
         }
     })
 }
 
 const updateProgress = () => {
-    circles.forEach((item, index) => {
+   
         const activeCircles = document.querySelectorAll('.active');
+       
         const progressWidth = (activeCircles.length - 1) / (circles.length - 1) * 100;
-
+      
         if (progressWidth <= 100) {
             progressBar.style.width = progressWidth + '%';
+            ;
         }
-    })
+    
 }
 
 
