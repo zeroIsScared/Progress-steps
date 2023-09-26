@@ -35,26 +35,26 @@ body {
 
 
 
-.progress_steps-bar::before {
+.progress_steps_container::before {
     content: '';
     background-color: var(--empty-color);
     position: absolute;
     top: 50%;
-    left: 0px;
+    left: 0;
     transform: translateY(-50%);
     height: 4px;
     width: 100%;
-    z-index: -2;
+    z-index: -1;
 }
-
 .progress_steps-bar {
-    position: absolute;
+   
     background-color: var(--fill-in-color);
+    position: absolute;
     top: 50%;
-    left: 0px;
-    height: 4px;
-    width: 100%;
+    left: 0;
     transform: translateY(-50%);
+    height: 4px;
+    width: 66%;
     z-index: -1;
     transition: 0.4s ease;
 }
