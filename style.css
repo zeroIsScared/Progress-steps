@@ -46,15 +46,16 @@ body {
     width: 100%;
     z-index: -1;
 }
+
 .progress_steps-bar {
-   
+
     background-color: var(--fill-in-color);
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     height: 4px;
-    width: 66%;
+    width: 0%;
     z-index: -1;
     transition: 0.4s ease;
 }
